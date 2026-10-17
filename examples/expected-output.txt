@@ -1,0 +1,1 @@
+{'rule_1_candidates': [(1, 2, ' A@EXAMPLE.INVALID ', 'A', 'B', 'EXACT_EMAIL', 'HIGH')]}

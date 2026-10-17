@@ -8,12 +8,24 @@ Create a consistent metadata and matching design across fragmented retail user, 
 
 A conceptual enterprise data model, an eight-table metadata dictionary, four candidate-matching rules, quality controls, governance ownership, and a consolidation-style master-data design. PostgreSQL rules are retained alongside a runnable SQLite fixture adapter.
 
-```mermaid
-flowchart LR
- A[Five source systems] --> B[Catalog and quality rules]
- B --> C[Consolidation hub]
- C --> D[Candidate matching]
- D --> E[Steward review and golden records]
+![Implementation mechanism: Source customer records → Normalize email and matching attributes → Generate four-rule candidate links → Retain ambiguity and temporal conflicts → Route candidates to steward review](assets/mechanism.svg)
+
+## Try a small example
+
+A small offline fixture exercises the public implementation. It demonstrates the behavior shown below; it does not replace the historical dataset, benchmark or production validation.
+
+After the local setup below, run from the repository root:
+
+```sh
+python examples/quickstart.py
+```
+
+The [example source](examples/quickstart.py), [captured output](examples/expected-output.txt) and [execution record](examples/environment.json) keep this demonstration inspectable. Floating-point values may vary with library versions.
+
+Observed output from this run:
+
+```text
+{'rule_1_candidates': [(1, 2, ' A@EXAMPLE.INVALID ', 'A', 'B', 'EXACT_EMAIL', 'HIGH')]}
 ```
 
 ## Evidence and results
