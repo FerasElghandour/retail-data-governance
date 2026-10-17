@@ -10,6 +10,15 @@ A conceptual enterprise data model, an eight-table metadata dictionary, four can
 
 ![Implementation mechanism: Source customer records → Normalize email and matching attributes → Generate four-rule candidate links → Retain ambiguity and temporal conflicts → Route candidates to steward review](assets/mechanism.svg)
 
+
+
+## Reproduce and inspect
+
+The executable reproduction profile now records exact commands, input/source hashes, dependency versions, logs and pass/fail status. Its scope distinguishes behavior checks from full-data benchmarks.
+
+[Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
+
+
 ## Try a small example
 
 A small offline fixture exercises the public implementation. It demonstrates the behavior shown below; it does not replace the historical dataset, benchmark or production validation.
