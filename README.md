@@ -56,3 +56,7 @@ Read `catalog/data_dictionary.csv`, `DESIGN.md`, and `sql/postgresql_matching.sq
 Matching outputs are candidate links for review, not automatic golden-record merges. Email addresses can be shared or reassigned; sellers can own identical items. Operational uptime, retention periods, and remediation targets are design assumptions requiring organizational review.
 
 [Validation record](VALIDATION.md) · [Inputs and applicable notices](DATA.md)
+
+## Reuse
+
+The original contributions listed in [LICENSING.md](LICENSING.md) are available under [MIT](LICENSE). This scoped grant preserves upstream notices and separate dataset, simulator, notebook and checkpoint terms.
